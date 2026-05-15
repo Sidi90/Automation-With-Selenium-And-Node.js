@@ -1,6 +1,6 @@
 # Automated Testing With Node.js And Playwright
 
-Automated google search operation.
+Automated Google-like search operation with Playwright end-to-end tests.
 
 ## Run application
 Clone the repository
@@ -28,6 +28,8 @@ Folder Structure
 
     ├── ...
     │
+    ├── fixtures                    # Local browser test fixture pages
+    │   └── google-search-mock.html # Mock search page for deterministic E2E tests
     ├── test                        # Test suite
     │   └── homePage.playwright.test.js # End-to-end Google search tests
     ├── playwright.config.js        # Playwright configuration

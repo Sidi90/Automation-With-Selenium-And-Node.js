@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Google Mock Search</title>
+</head>
+<body>
+  <main>
+    <h1>Google</h1>
+    <form id="searchForm">
+      <input id="lst-ib" name="q" type="text" aria-label="Search">
+      <input name="btnK" type="submit" value="Google Search">
+    </form>
+    <p id="resultStats" aria-live="polite"></p>
+  </main>
+  <script>
+    const form = document.getElementById('searchForm');
+    const input = document.getElementById('lst-ib');
+    const stats = document.getElementById('resultStats');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const keyword = input.value.trim();
+      stats.textContent = `About 42,000 results for ${keyword}`;
+    });
+  </script>
+</body>
+</html>
